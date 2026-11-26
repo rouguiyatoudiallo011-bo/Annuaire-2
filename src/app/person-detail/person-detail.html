@@ -1,1 +1,24 @@
-<p>person-detail works!</p>
+
+<section>
+
+
+<div class="containerPeople">
+   
+        <div class="cardPerson">
+          <img [src]="person()?.picture.large" class="imagePerson">
+
+          <div class="infoPerson">
+            <h3>
+              {{person()?.name.title}}
+              {{person()?.name.first}}
+              {{person()?.name.last}}
+            </h3>
+             <p>Âge: {{person()?.dob.age}}</p>
+             <p>Email: {{person()?.phone}}</p>
+              <p>Téléphone: {{person()?.email}}</p>
+            <p>Ville: {{person()?.location.city}}</p>
+          </div>
+        </div>   
+       </div>
+       
+  

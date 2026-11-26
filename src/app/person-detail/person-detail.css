@@ -1,0 +1,103 @@
+/* Section principale */
+section {
+  min-height: 100vh;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Conteneur */
+.containerPeople {
+  width: 100%;
+  max-width: 650px;
+  margin: 20px auto;
+}
+
+/* Carte */
+.cardPerson {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+  gap: 30px;
+
+  padding: 35px;
+  background: linear-gradient(145deg, #ffffff, #f1f0ff);
+
+  border: 1px solid #ddd6fe;
+  border-radius: 25px;
+
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.12);
+
+  transition: all 0.3s ease;
+}
+
+/* Survol */
+.cardPerson:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(79, 70, 229, 0.2);
+  border-color: #8b5cf6;
+}
+
+/* Photo */
+.imagePerson {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  border: 5px solid #8b5cf6;
+  box-shadow: 0 5px 20px rgba(139, 92, 246, 0.3);
+}
+
+/* Informations */
+.infoPerson h3 {
+  color: #312e81;
+  font-size: 23px;
+  font-weight: 800;
+  margin: 0 0 20px;
+  border-bottom: 2px solid #ddd6fe;
+  padding-bottom: 12px;
+}
+
+.infoPerson p {
+  color: #555577;
+  font-size: 15px;
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+
+.infoPerson p:hover {
+  color: #7c3aed;
+}
+
+/* Chargement et erreur */
+section > p {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 15px;
+  color: #5b21b6;
+  font-size: 17px;
+  font-weight: 600;
+  box-shadow: 0 5px 20px rgba(79, 70, 229, 0.1);
+}
+
+/* Responsive tablette et mobile */
+@media (max-width: 650px) {
+  .cardPerson {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .imagePerson {
+    width: 140px;
+    height: 140px;
+  }
+
+  .infoPerson h3 {
+    font-size: 20px;
+  }
+}

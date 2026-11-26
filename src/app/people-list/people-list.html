@@ -4,7 +4,9 @@
     }
     @else if (people()) {
         @for (person of this.people(); track person.login.uuid) {
+            <a [routerLink]="['/personnes', person.login.uuid]">
             <app-person-cart [person]= "person"/>
+            </a>
         }
     }
       @else if (people === null){
