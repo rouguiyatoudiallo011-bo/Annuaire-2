@@ -1,1 +1,25 @@
-<p>person-cart works!</p>
+
+<div class="containerPeople">
+
+
+    <div class="cardPerson">
+
+      <img [src]="person().picture.large" class="imagePerson">
+
+      <div class="infoPerson">
+        <h3>
+          {{ person().name.title }}
+          {{ person().name.first }}
+          {{ person().name.last }}
+        </h3>
+
+        <p>Âge : {{ person().dob.age }}</p>
+        <p>Email : {{ person().email }}</p>
+        <p>Téléphone : {{ person().phone }}</p>
+        <p>Ville : {{ person().location.city }}</p>
+      </div>
+
+    </div>
+  
+
+</div>

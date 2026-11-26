@@ -1,1 +1,13 @@
-<p>people-list works!</p>
+<section>
+    @if (service.loading()) {
+        <p>Chargement en cours</p>
+    }
+    @else if (people()) {
+        @for (person of this.people(); track person.login.uuid) {
+            <app-person-cart [person]= "person"/>
+        }
+    }
+      @else if (people === null){
+    <p>L'annuaire est indisponible. Réessaie dans un instant.</p>
+  }
+</section>

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PeopleApi } from '../services/people-api';
+
 
 @Component({
   imports: [],
@@ -6,4 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './header.css',
   templateUrl: './header.html',
 })
-export class Header {}
+export class Header {
+
+  service = inject(PeopleApi);
+  count = this.service.numberPerson;
+}

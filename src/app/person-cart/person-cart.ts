@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input, inject, signal, effect } from '@angular/core';
+import { Person } from '../models/models';
 
 @Component({
   imports: [],
@@ -6,4 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './person-cart.css',
   templateUrl: './person-cart.html',
 })
-export class PersonCart {}
+export class PersonCart {
+
+
+  person = input.required<Person>();
+
+
+
+}

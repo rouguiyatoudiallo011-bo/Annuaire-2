@@ -16,8 +16,8 @@
     };
     phone: string;
     email: string;
-    id: {
-      value: string;
+    login: {
+      uuid: string;
     }
 }
 

@@ -1,3 +1,4 @@
+
 import { Service, signal, inject } from '@angular/core';
 import { Person, PeopleResponse } from '../models/models';
 import { HttpClient } from '@angular/common/http';
@@ -20,8 +21,8 @@ export class PeopleApi {
 
         try {
             const response = await firstValueFrom(this.http.get<PeopleResponse>(`${this.url}`));
-
             this.people.set(response.results);
+
             this.numberPerson.set(response.results.length);
         }
         catch (error) {
